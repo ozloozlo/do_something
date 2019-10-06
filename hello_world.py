@@ -11,5 +11,5 @@ class HttpProcessor(BaseHTTPRequestHandler):
         hello_text = f"Hello, world from {uname()[1]}!\n" 
         self.wfile.write(hello_text.encode("utf-8")) 
  
-serv = HTTPServer(("localhost",8080),HttpProcessor) 
+serv = HTTPServer(("0.0.0.0",8080),HttpProcessor) 
 serv.serve_forever()
